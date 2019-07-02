@@ -28,6 +28,7 @@ public class AccessFilter extends ZuulFilter {
   }
 
   public Object run(){
+
     RequestContext ctx = RequestContext.getCurrentContext();
     HttpServletRequest request = ctx.getRequest();
 
@@ -46,4 +47,5 @@ public class AccessFilter extends ZuulFilter {
     log.info("Access token is ok");
     return null;
   }
+
 }
